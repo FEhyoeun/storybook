@@ -14,11 +14,11 @@ export default {
         maxLength: 10,
         isDisabled: {
             control: { type: 'select' },
-            options: ['true', 'false'],
+            options: [true, false],
         },
         isError: {
             control: { type: 'select' },
-            options: ['true', 'false'],
+            options: [true, false],
         }
     },
 };
@@ -29,9 +29,9 @@ const Template = (args, { argTypes }) => ({
     template: '<my-textarea v-bind="$props" />',
 });
 
-export const l = Template.bind({});
-l.args = {
-    size: 'l',
+export const s = Template.bind({});
+s.args = {
+    size: 's',
     content: '',
     placeholder: 'placeholder 내용입니다.',
     helperText: '이 부분을 참고하세요.',
@@ -40,8 +40,8 @@ l.args = {
     isError: false,
 };
 
-export const s = Template.bind({});
-s.args = {
+export const m = Template.bind({});
+m.args = {
     size: 'm',
     content: '',
     placeholder: 'placeholder 내용입니다.',
@@ -50,3 +50,4 @@ s.args = {
     isDisabled: false,
     isError: false,
 };
+

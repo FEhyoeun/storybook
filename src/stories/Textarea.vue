@@ -3,7 +3,7 @@
     <div>
       <h2 class="title">View</h2>
       <textarea
-        :class="classes"
+        :class="textareaClasses"
         :placeholder="placeholder"
         :maxlength="maxLength"
         :disabled="isDisabled"
@@ -11,7 +11,12 @@
       />
     </div>
     <div class="helper__wrapper">
-      <span class="helper__text">{{ helperText }}</span>
+      <span
+          :class="helperTextClasses"
+          class="helper__text"
+      >
+        {{ helperText }}
+      </span>
       <span class="helper__length"> {{ currentLength }} / {{ maxLength }}</span>
     </div>
   </div>
@@ -61,11 +66,16 @@ export default {
     }
   },
   computed: {
-    classes() {
+    textareaClasses() {
       return {
         'textarea': true,
         [`textarea--${this.size}`]: true,
+        [`textarea--isDisabled`]: this.isDisabled,
         'textarea--error': this.isError,
+      }
+    },
+    helperTextClasses() {
+      return {
         'helper__text--error': this.isError,
       }
     },
