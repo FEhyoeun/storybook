@@ -8,7 +8,6 @@ export default {
             control: { type: 'select' },
             options: ['s', 'm'],
         },
-        content: '',
         placeholder: 'ex) somebody help me!',
         helperText: 'ex) somebody help me!',
         maxLength: 10,
@@ -32,7 +31,6 @@ const Template = (args, { argTypes }) => ({
 export const s = Template.bind({});
 s.args = {
     size: 's',
-    content: '',
     placeholder: 'placeholder 내용입니다.',
     helperText: '이 부분을 참고하세요.',
     maxLength: 10,
@@ -43,7 +41,6 @@ s.args = {
 export const m = Template.bind({});
 m.args = {
     size: 'm',
-    content: '',
     placeholder: 'placeholder 내용입니다.',
     helperText: '이 부분을 참고하세요.',
     maxLength: 10,

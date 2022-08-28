@@ -12,8 +12,8 @@
     </div>
     <div class="helper__wrapper">
       <span
-          :class="helperTextClasses"
-          class="helper__text"
+        :class="helperTextClasses"
+        class="helper__text"
       >
         {{ helperText }}
       </span>
@@ -28,10 +28,6 @@ import './textarea.css'
 export default {
   name: "my-textarea",
   props: {
-    content: {
-      type: String,
-      required: false,
-    },
     helperText: {
       type: String,
       required: false,
@@ -83,13 +79,6 @@ export default {
       return this.textData.length
     }
   },
-  watch: {
-    content: {
-      handler(value) {
-        this.textData = value
-      }
-    },
-  }
 }
 </script>
 
